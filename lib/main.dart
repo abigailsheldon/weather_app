@@ -104,6 +104,15 @@ class _TabsNonScrollableDemoState extends State< _TabsNonScrollableDemo>
                     ),
                   ),
                 ),
+                TextButton(
+                  onPressed: () {  },
+                  child: Container(
+                    margin:EdgeInsets.only(top: 25),
+                    child: Text('Enter City'),
+                    color: Colors.pink 
+                    ),
+                  ),
+   
               ],
             ),
           ),
