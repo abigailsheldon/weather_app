@@ -39,6 +39,7 @@ class _TabsNonScrollableDemoState extends State< _TabsNonScrollableDemo>
     late TabController _tabController;
 
     final RestorableInt tabIndex = RestorableInt(0);
+    final TextEditingController _cityController = TextEditingController();
 
     @override
     String get restorationId => 'tab_non_scrollable_demo';
@@ -90,12 +91,22 @@ class _TabsNonScrollableDemoState extends State< _TabsNonScrollableDemo>
       children: [
        Center(
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Weather'),
-            ], 
-        ),
-       ),
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('Enter City Name:'),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextField(
+                    controller: _cityController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: 'Enter city',
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
        Center(
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
